@@ -14,6 +14,7 @@ const mapDispatchToProps = dispatch => {
   return {
     addTodo: (todo) => dispatch(actions.addTodo(todo)),
     delTodo: (todo) => dispatch(actions.delTodo(todo)),
+    delById: (id) => dispatch(actions.delById(id)),
     changeTodo: (changetodo) => dispatch(actions.changeTodo(changetodo)),
   }
 }

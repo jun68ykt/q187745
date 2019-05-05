@@ -13,6 +13,13 @@ export const delTodo = (todo) => {
   };
 }
 
+export const delById = (id) => {
+  return {
+    type: 'DEL_BY_ID',
+    payload: { id }
+  };
+}
+
 export const changeTodo = (changetodo) => {
   return {
     type: 'CHANGE_TODO',
