@@ -12,7 +12,7 @@ export const todoReducer = (state = initialState, action) => {
     case 'DEL_TODO':
       return {
         ...state,
-        todoList: state.todoList.concat([action.payload.todo])
+        todoList: state.todoList.filter(todo => todo !== action.payload.todo)
       };
     case 'CHANGE_TODO' :
       const changetodo = action.payload.changetodo;

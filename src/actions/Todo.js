@@ -6,10 +6,10 @@ export const addTodo = (todo) => {
   };
 }
 
-export const delTodo = (deltodo) => {
+export const delTodo = (todo) => {
   return {
     type: 'DEL_TODO',
-    payload: { deltodo: deltodo }
+    payload: { todo: todo }
   };
 }
 
