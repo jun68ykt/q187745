@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     addTodo: (todo) => dispatch(actions.addTodo(todo)),
-    delTodo: (deltodo) => dispatch(actions.delTodo(deltodo)),
+    delTodo: (todo) => dispatch(actions.delTodo(todo)),
     changeTodo: (changetodo) => dispatch(actions.changeTodo(changetodo)),
   }
 }
