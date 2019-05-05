@@ -12,7 +12,9 @@ export default class Todo extends React.Component {
     // StoreのTodoからリストを生成
     const list = this.props.todo.todoList.map(e =>
       <li key={e.id}>
-        <span className="todoId">{e.id}</span>{e.todo}
+        <button className="delete">削除</button>
+        <span className="todoId">{e.id}</span>
+        {e.todo}
       </li>
     );
     // <button onClick={() => this.props.changeTodo(this.state.todo)}>変更</button></li>)
