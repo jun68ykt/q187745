@@ -2,17 +2,19 @@ const initialState = {
   todoList: [],
 }
 
+let nextTodoId = 9001;
+
 export const todoReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return {
         ...state,
-        todoList: state.todoList.concat([action.payload.todo])
+        todoList: [...state.todoList, { id: nextTodoId ++, todo: action.payload.todo }]
       };
     case 'DEL_TODO':
       return {
         ...state,
-        todoList: state.todoList.filter(todo => todo !== action.payload.todo)
+        todoList: state.todoList.filter(e => e.todo !== action.payload.todo)
       };
     case 'CHANGE_TODO' :
       const changetodo = action.payload.changetodo;

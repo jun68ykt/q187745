@@ -1,4 +1,5 @@
 import React from 'react';
+import './Todo.css';
 
 export default class Todo extends React.Component {
   state = {
@@ -9,7 +10,11 @@ export default class Todo extends React.Component {
     console.log(this.props);
 
     // StoreのTodoからリストを生成
-    const list = this.props.todo.todoList.map((todo, index) => <li key={index}>{todo}</li>)
+    const list = this.props.todo.todoList.map(e =>
+      <li key={e.id}>
+        <span className="todoId">{e.id}</span>{e.todo}
+      </li>
+    );
     // <button onClick={() => this.props.changeTodo(this.state.todo)}>変更</button></li>)
 
     return (
